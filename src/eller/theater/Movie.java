@@ -65,9 +65,14 @@ public class Movie {
     public void setAdmission(double admi){
         admission=admi;
     }
-
+    
+    public void Time(String startTime, double length, String endTime){
+        int SH = Integer.parseInt(startTime.substring(0,2));
+    }
+    
     public void compare(){
         int startMin, startHour, endMin, endHour;
-        System.out.println("What time does ");
+        System.out.println("What time does the first movie start? (XX:XX) format");
+        
     }
 }
