@@ -67,6 +67,7 @@ public class Movie {
     }
 
     public void compare(){
-        
+        int startMin, startHour, endMin, endHour;
+        System.out.println("What time does ");
     }
 }
