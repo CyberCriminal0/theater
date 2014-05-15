@@ -17,7 +17,7 @@ public class Movie {
     admission = adm;
     numMovies++;
 }
-//get commands return given variables
+//Creates methods for getting variables for each movie object
     public String getTitle(){
         return title;
     }
@@ -43,7 +43,7 @@ public class Movie {
         return numMovies;
     }
     
-//set commands edit or set existing variables  
+//Creates methods to set movie object variables for manual edits
     public void setTitle(String t){
         title=t;
     }
@@ -66,13 +66,24 @@ public class Movie {
         admission=admi;
     }
     
+    //time conversion method
+    
     public void Time(String startTime, double length, String endTime){
-        int SH = Integer.parseInt(startTime.substring(0,2));
+        int startH = Integer.parseInt(startTime.substring(0,2));
+        int startM = Integer.parseInt(startTime.substring(3));
+        int movieLength = (int)(length*60);
+        int endM = movieLength%60 + startM;
+        int endHour = movieLength/60 + startH;
+        
+        if(endM >= 60){
+            endHour++;
+            endM %= 60;
+        }
     }
     
+    //comparison method
     public void compare(){
         int startMin, startHour, endMin, endHour;
-        System.out.println("What time does the first movie start? (XX:XX) format");
-        
+        System.out.println("What time does the first movie start? (XX:XX) format"); 
     }
 }
