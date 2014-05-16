@@ -68,17 +68,22 @@ public class Movie {
     
     //time conversion method
     
-    public void Time(String startTime, double length, String endTime){
+    public void Time(String startTime, double length){
         int startH = Integer.parseInt(startTime.substring(0,2));
         int startM = Integer.parseInt(startTime.substring(3));
         int movieLength = (int)(length*60);
         int endM = movieLength%60 + startM;
+        if(endM==60){
+            endM=00;
+            startH++;
+        }
         int endHour = movieLength/60 + startH;
-        
+        System.out.println("The movie is going to end at: "+endHour+":"+endM);
         if(endM >= 60){
             endHour++;
             endM %= 60;
         }
+        
     }
     
     //comparison method

@@ -13,10 +13,7 @@ package eller.theater;
 public class Theater {
     public static void main (String[]args){
         //(String ti, String ta, String sta, double st, double dur, double e, double adm)
-        Movie Test1 = new Movie("Test Movie", "Quite the Test", "Test Tester", 13.11, 90.0, 14.22, 55.55);
-        System.out.println(Test1.getTitle());
-        System.out.println(Test1.getMovies());
-        Movie Test2 = new Movie("Test Movie", "Quite the Test", "Test Tester", 13.11, 90.0, 14.22, 55.55);
-        System.out.println(Test1.getMovies());
+        Movie Test1 = new Movie("Test Movie", "Quite the Test", "Test Tester", 9.30, 90.0, 14.22, 55.55);
+        Test1.Time("09:30", 1.5);
     }
 }
