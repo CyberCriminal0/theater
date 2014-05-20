@@ -89,6 +89,7 @@ public class Movie {
     //comparison method
     public void compare(){
         int startMin, startHour, endMin, endHour;
-        System.out.println("What time does the first movie start? (XX:XX) format"); 
+        System.out.println("What time does the first movie start? (XX:XX) format");
+        
     }
 }
