@@ -1,4 +1,7 @@
 package eller.theater;
+
+import java.util.Scanner;
+
 /**
  *
  * @author n352991
@@ -42,6 +45,16 @@ public class Movie {
     public int getMovies(){
         return numMovies;
     }
+    public String getStartString(){
+        
+        String stringBack = String.valueOf(start);
+        return stringBack;
+    }
+    public String getInfo(){
+        String info = (this.getTitle()+ " " + this.getTagline()+ " Starring: " + this.getStar() + " Starting at: " + 
+            this.getStart() + " and ending at: " + getEnd());
+        return info;
+    }
     
 //Creates methods to set movie object variables for manual edits
     public void setTitle(String t){
@@ -65,6 +78,7 @@ public class Movie {
     public void setAdmission(double admi){
         admission=admi;
     }
+
     
     //time conversion method
     
@@ -88,8 +102,23 @@ public class Movie {
     
     //comparison method
     public void compare(){
+        //this method should not have any user interaction -- in fact, this class
+        //shouldn't have any interaction with the user -- no system.out.anything
+        
+        // compare should take in a movie object
+        // and compare that movie object's end time with the start time
+        // of this movie object.  
+        
+        // if you want to display the movies, it is not the responsibility
+        // of any particular movie object to do that -- it is the responsibility of the theater.
         int startMin, startHour, endMin, endHour;
-        System.out.println("What time does the first movie start? (XX:XX) format");
+        System.out.println("The movies currently showing are...");
+        
+        System.out.println("What time does the first movie start? (XX.XX) format");
+        double time1 = new Scanner(System.in).nextDouble();
+        String convertTime1 = String.valueOf(time1);
+        System.out.println(time1);
+        
         
     }
 }
