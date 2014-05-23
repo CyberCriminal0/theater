@@ -92,7 +92,6 @@ public class Movie {
             startH++;
         }
         int endHour = movieLength/60 + startH;
-        System.out.println("The movie is going to end at: "+endHour+":"+endM);
         if(endM >= 60){
             endHour++;
             endM %= 60;
@@ -112,13 +111,5 @@ public class Movie {
         // if you want to display the movies, it is not the responsibility
         // of any particular movie object to do that -- it is the responsibility of the theater.
         int startMin, startHour, endMin, endHour;
-        System.out.println("The movies currently showing are...");
-        
-        System.out.println("What time does the first movie start? (XX.XX) format");
-        double time1 = new Scanner(System.in).nextDouble();
-        String convertTime1 = String.valueOf(time1);
-        System.out.println(time1);
-        
-        
     }
 }
