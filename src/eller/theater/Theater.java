@@ -79,7 +79,22 @@ public class Theater {
             System.out.println("2: " + remaining[2]);
             System.out.println("3: " + remaining[3]);
             System.out.println("Please select your choice by typing in the corrisponding movie's number...");
-            
+        int choice2 = new Scanner(System.in).nextInt();
+        String movieChoice2 = " is not a valid movie choice";
+        switch (choice2) {
+            case 1: System.out.println("You have chosen: " + remaining[1]);
+                movieChoice2 = remaining[1];
+                break;
+            case 2: System.out.println("You have chosen: " + remaining[2]);
+                movieChoice2 = remaining[2];
+                break;
+            case 3: System.out.println("You have chosen: " + remaining[3]);
+                movieChoice2 = remaining[3];
+                break;
+            default: System.out.println("ERROR: " + choice2 + movieChoice2);
+            System.exit(0);
+                break;
+        }
         }
     }
 }
