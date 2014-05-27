@@ -21,30 +21,53 @@ public class Theater {
         Movie KindergartetenCop = new Movie ("Kindergarten Cop", "Go ahead, you tell him you didn't do your homework.", "Arnold Schwarzenegger", 2.0, 111.0, 3.51, 5);
         
         System.out.println("Welcome to the Movie Theater! -- there are currently "+ numMovies + " movies showing:");
+        
+        String[] movies;
+        movies = new String[5];
+        movies[1] = SonOfGodzilla.getTitle();
+        movies[2] = Interstella5555.getTitle();
+        movies[3] = MontyPythonAndTheHolyGrail.getTitle();
+        movies[4] = KindergartetenCop.getTitle();
+        
         System.out.println("1: "+SonOfGodzilla.getInfo());
         System.out.println("2: "+Interstella5555.getInfo());
         System.out.println("3: "+MontyPythonAndTheHolyGrail.getInfo());
         System.out.println("4: "+KindergartetenCop.getInfo());
+        
         // you have to write the getInfo method so that it returns all the info of the movie
         // getInfo() will be in the Movie class, and it returns a user-friendly String comprised
         // of the important info of the movie (concatenate the gets you've already written)
+        String[] remaining;
+        remaining = new String[4];
         System.out.println("Please select a movie you would like to see by typing its number...");
         int choice1 = new Scanner(System.in).nextInt();
         String movieChoice1 = "You have not selected a movie";
         switch (choice1) {
             case 1: System.out.println("You have chosen: "+SonOfGodzilla.getTitle());
                 movieChoice1 = SonOfGodzilla.getTitle();
+                remaining[1] = movies[2];
+                remaining[2] = movies[3];
+                remaining[3] = movies[4];
                 break;
             case 2: System.out.println("You have chosen: "+Interstella5555.getTitle());
                 movieChoice1 = Interstella5555.getTitle();
+                remaining[1] = movies[1];
+                remaining[2] = movies[3];
+                remaining[3] = movies[4];
                 break;
             case 3: System.out.println("You have chosen: "+MontyPythonAndTheHolyGrail.getTitle());
                 movieChoice1 = MontyPythonAndTheHolyGrail.getTitle();
+                remaining[1] = movies[1];
+                remaining[2] = movies[2];
+                remaining[3] = movies[4];
                 break;
             case 4: System.out.println("You have chosen: "+KindergartetenCop.getTitle());
                 movieChoice1 = KindergartetenCop.getTitle();
+                remaining[1] = movies[1];
+                remaining[2] = movies[2];
+                remaining[3] = movies[3];
                 break;
-            default: System.out.println("ERROR: You have chosen an invalid number");
+            default: System.out.println("ERROR: " + movieChoice1);
             System.exit(0);
                 break;
         }
@@ -52,6 +75,10 @@ public class Theater {
         String yesno = new Scanner(System.in).nextLine();
         if(yesno.equals("y")){
             System.out.println("These are the movies you would be able to see after " + movieChoice1 + "...");
+            System.out.println("1: " + remaining[1]);
+            System.out.println("2: " + remaining[2]);
+            System.out.println("3: " + remaining[3]);
+            System.out.println("Please select your choice by typing in the corrisponding movie's number...");
             
         }
     }
